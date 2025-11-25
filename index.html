@@ -984,12 +984,64 @@
             opacity: 1;
         }
 
-        .gallery-item:nth-child(1) { transition-delay: 0.1s; }
-        .gallery-item:nth-child(2) { transition-delay: 0.2s; }
-        .gallery-item:nth-child(3) { transition-delay: 0.3s; }
-        .gallery-item:nth-child(4) { transition-delay: 0.4s; }
-        .gallery-item:nth-child(5) { transition-delay: 0.5s; }
-        .gallery-item:nth-child(6) { transition-delay: 0.6s; }
+        .gallery-item:nth-child(1) { transition-delay: 0s; }
+        .gallery-item:nth-child(2) { transition-delay: 0.1s; }
+        .gallery-item:nth-child(3) { transition-delay: 0.2s; }
+        .gallery-item:nth-child(4) { transition-delay: 0.3s; }
+        .gallery-item:nth-child(5) { transition-delay: 0.4s; }
+        .gallery-item:nth-child(6) { transition-delay: 0.5s; }
+        .gallery-item:nth-child(7) { transition-delay: 0.6s; }
+        .gallery-item:nth-child(8) { transition-delay: 0.7s; }
+        .gallery-item:nth-child(9) { transition-delay: 0.8s; }
+        .gallery-item:nth-child(10) { transition-delay: 0.9s; }
+        .gallery-item:nth-child(11) { transition-delay: 1.0s; }
+        .gallery-item:nth-child(12) { transition-delay: 1.1s; }
+        .gallery-item:nth-child(13) { transition-delay: 1.2s; }
+        .gallery-item:nth-child(14) { transition-delay: 1.3s; }
+        .gallery-item:nth-child(15) { transition-delay: 1.4s; }
+        .gallery-item:nth-child(16) { transition-delay: 1.5s; }
+        .gallery-item:nth-child(17) { transition-delay: 1.6s; }
+        .gallery-item:nth-child(18) { transition-delay: 1.7s; }
+        .gallery-item:nth-child(19) { transition-delay: 1.8s; }
+        .gallery-item:nth-child(20) { transition-delay: 1.9s; }
+        .gallery-item:nth-child(21) { transition-delay: 2.0s; }
+        .gallery-item:nth-child(22) { transition-delay: 2.1s; }
+        .gallery-item:nth-child(23) { transition-delay: 2.2s; }
+        .gallery-item:nth-child(n+24) { transition-delay: 2.3s; }
+
+        .gallery-item.logo-item {
+            grid-column: span 2;
+            grid-row: span 2;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .gallery-item.logo-item img {
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .gallery-item.logo-item:hover img {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .gallery-item.logo-item .gallery-overlay {
+            background: transparent;
+            transform: translateY(0);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-item.logo-item .gallery-overlay h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
         .gallery-item:hover {
             transform: scale(1.05);
@@ -1029,6 +1081,31 @@
 
         .gallery-overlay p {
             font-size: 1rem;
+        }
+
+        /* Gallery Logo Watermark */
+        .gallery-logo {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+            z-index: 20;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        }
+
+        .gallery-item:hover .gallery-logo {
+            opacity: 1;
+            transform: scale(1.1);
         }
 
         /* Map Section */
@@ -1449,6 +1526,16 @@
                 grid-template-columns: 1fr;
             }
 
+            .gallery-item.logo-item {
+                grid-column: span 1;
+                grid-row: span 1;
+                padding: 20px;
+            }
+
+            .gallery-item.logo-item .gallery-overlay h3 {
+                font-size: 1.5rem;
+            }
+
             .clients-container {
                 height: 250px;
             }
@@ -1668,6 +1755,9 @@
         <h2 class="section-heading">Our Gallery</h2>
         <div class="gallery-container">
             <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
                 <img src="./images/gallery1.jpg" alt="Wedding Decoration by Magic Kitchen">
                 <div class="gallery-overlay">
                     <h3>Magic Broast</h3>
@@ -1675,6 +1765,9 @@
                 </div>
             </div>
             <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
                 <img src="./images/gallery2.jpg" alt="Event Catering in Nilambur">
                 <div class="gallery-overlay">
                     <h3>Flavors with a Touch of Magic!</h3>
@@ -1682,6 +1775,9 @@
                 </div>
             </div>
             <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
                 <img src="./images/gallery3.jpg" alt="Corporate Event Management">
                 <div class="gallery-overlay">
                     <h3>Elegant Celebrations</h3>
@@ -1689,6 +1785,9 @@
                 </div>
             </div>
             <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
                 <img src="./images/gallery4.jpg" alt="Birthday Party Arrangements">
                 <div class="gallery-overlay">
                     <h3>Magic Dining</h3>
@@ -1696,6 +1795,9 @@
                 </div>
             </div>
             <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
                 <img src="./images/gallery5.jpg" alt="Beach Wedding Decorations">
                 <div class="gallery-overlay">
                     <h3>Grand Buffet Spread</h3>
@@ -1703,10 +1805,173 @@
                 </div>
             </div>
             <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
                 <img src="./images/gallery6.jpg" alt="Cocktail Party Setup">
                 <div class="gallery-overlay">
                     <h3>Rustic Bar Setup</h3>
                     <p>A charming open-air bar with warm lights and decor.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/gallery7.jpg" alt="Event Showcase by Magic Kitchen">
+                <div class="gallery-overlay">
+                    <h3>Magical Moments</h3>
+                    <p>Capturing the essence of unforgettable celebrations.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/8.jpg" alt="Event Photography">
+                <div class="gallery-overlay">
+                    <h3>Elegant Event Setup</h3>
+                    <p>Professional arrangements for your special day.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/9.jpg" alt="Catering Services">
+                <div class="gallery-overlay">
+                    <h3>Exquisite Catering</h3>
+                    <p>Delicious cuisine prepared with passion and care.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/10.jpg" alt="Event Decorations">
+                <div class="gallery-overlay">
+                    <h3>Stunning Decorations</h3>
+                    <p>Transform your venue into a magical space.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/11.jpg" alt="Wedding Arrangements">
+                <div class="gallery-overlay">
+                    <h3>Wedding Excellence</h3>
+                    <p>Creating dream weddings with attention to detail.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/12.jpg" alt="Event Management">
+                <div class="gallery-overlay">
+                    <h3>Professional Service</h3>
+                    <p>Seamless event management from start to finish.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/13.jpg" alt="Culinary Delights">
+                <div class="gallery-overlay">
+                    <h3>Culinary Masterpieces</h3>
+                    <p>Artfully crafted dishes that delight the senses.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/14.jpg" alt="Event Styling">
+                <div class="gallery-overlay">
+                    <h3>Stylish Presentations</h3>
+                    <p>Every detail styled to perfection.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/15.jpg" alt="Celebration Setup">
+                <div class="gallery-overlay">
+                    <h3>Celebration Ready</h3>
+                    <p>Your perfect event, beautifully arranged.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/16.jpg" alt="Event Excellence">
+                <div class="gallery-overlay">
+                    <h3>Excellence in Every Detail</h3>
+                    <p>Where quality meets creativity.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/event1.jpg" alt="Special Event">
+                <div class="gallery-overlay">
+                    <h3>Special Events</h3>
+                    <p>Making every occasion memorable and magical.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/event2.jpg" alt="Event Showcase">
+                <div class="gallery-overlay">
+                    <h3>Event Showcase</h3>
+                    <p>Showcasing our best work and dedication.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/17.jpg" alt="Event Gallery">
+                <div class="gallery-overlay">
+                    <h3>Memorable Celebrations</h3>
+                    <p>Creating unforgettable moments for every occasion.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/18.jpg" alt="Event Photography">
+                <div class="gallery-overlay">
+                    <h3>Beautiful Moments</h3>
+                    <p>Capturing the joy and magic of your special day.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/19.jpg" alt="Event Management">
+                <div class="gallery-overlay">
+                    <h3>Perfect Arrangements</h3>
+                    <p>Every detail carefully planned and executed.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-logo">
+                    <img src="./images/magic.jpg" alt="Magic Kitchen Logo">
+                </div>
+                <img src="./images/20.jpg" alt="Event Excellence">
+                <div class="gallery-overlay">
+                    <h3>Excellence Delivered</h3>
+                    <p>Where dreams become reality through our expertise.</p>
                 </div>
             </div>
         </div>
